@@ -10,15 +10,20 @@
 <script >
     //Viết lại lệnh, chương trình chạy đến khi người dùng nhập đúng nhiệt độ trong khung quy định
     let number = parseInt(prompt('Nhap nhiet do: '));
-    if((number > 20) || (number < 100)){
+    if((number > 20) && (number < 100)){
         alert("nhiệt độ phù hơp");
     }
     while ( (number < 20) || (number > 100) ){
+        if(number < 20){
+            alert("Nhap nhiet do cao hon");
+        } else {
+            if(number > 100){
+                alert("Nhap nhiet do thap hon");
+            }
+        }
         number = parseInt(prompt('Nhap lai nhiet do: '));
-        alert("nhiệt độ phù hơp");
+
     }
-
-
 
 
 </script>

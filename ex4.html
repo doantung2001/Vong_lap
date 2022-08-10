@@ -14,15 +14,18 @@
     //chưa đúng yêu cầu của đề bài
     // Ng dùng nhập vào 2 khoảng để đoán. VD: 0 -> 100. Thuật toán chọn ra 1 số ngẫu nhiên trong khoảng và cho ng dùng đoán 
 function Game() {
-    let number = 81;
+    let max = parseInt(prompt('Vui long nhap so Max:'));
+    let min = parseInt(prompt('Vui long nhap so min:'));
+    let number = Math.floor(Math.random() * (max - min)) + min;
+
     for (let i = 1; i < 7; i++) {
-        let n = parseInt(prompt('Vui long nhap so can doan (0-99):'));
+        let n = parseInt(prompt('Vui long nhap so can doan :'));
         if (number === n) {
             alert('So do la :' + number);
             document.write("Chuc mung ban" + "<br\>");
             break;
         } else {
-            if(i < 6){
+            if (i < 6) {
                 alert("ban con " + (6 - i) + "lan doan");
                 if (n > number) {
                     alert('So do la so nho hon');
@@ -30,17 +33,15 @@ function Game() {
                 } else {
                     alert('So do la so lon hon');
                 }
-            }else {
+            } else {
                 alert("gameover");
             }
 
 
-
-
         }
+
+
     }
-
-
 }
 
 
